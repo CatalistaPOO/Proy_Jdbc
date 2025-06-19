@@ -10,7 +10,8 @@ public class Class02BuscadorEmpleadosDept {
         Scanner teclado = new Scanner(System.in); 
         System.out.println("Introduzca numero de departamento");
         String idDepartamento = teclado.nextLine();
-
+        
+        //Usando las clases de SQL usaremos try/catch
         try {
             //Pasos para conectar a la BBDD
             Class.forName("com.mysql.cj.jdbc.Driver");//buscamos driver (abrir workbench)
@@ -31,8 +32,6 @@ public class Class02BuscadorEmpleadosDept {
             // Liberar la consulta (rs) y la conexión (cn) SIEMPRE.
             rs.close();
             cn.close();
-
-
 
         } catch (Exception e) {//recogemos cualquier excepción que se produzca usando la clase Connection
             System.out.println("ERROR grave: " + e);
