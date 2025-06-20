@@ -34,10 +34,8 @@ public class Class03BuscadorPlantillaFuncion {
                 rs.close();
                 cn.close();
 
-
         } catch (Exception e) {
             System.out.println("ERROR GRAVE: " + e) ;
         }
-
     }
 }
